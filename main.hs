@@ -1,5 +1,2 @@
-
-
-
 main = do
-    print "Hello, world!"
+    print "Lekker kloonen heur"
