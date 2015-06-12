@@ -17,6 +17,8 @@ instance Show BExpression where
 	show (BApp t1 t2) = (show t1) ++ " $ " ++ (show t2)
 	show (BVar index) = show index
 
+instance Eq Expression where
+	a == b = (normalize a) == (normalize b)
 
 exLamBruijn :: BExpression
 exLamBruijn = BLam (BApp (BLam (BApp (BVar 1) (BLam (BVar 1)))) (BLam (BApp (BVar 2) (BVar 1))))

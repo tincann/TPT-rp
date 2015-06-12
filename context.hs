@@ -7,9 +7,6 @@ data Expression =
 	| App Expression Expression
 	| Var Name
 
-instance Eq Expression where
-	a == b = (normalize a) == (normalize b)
-
 instance Show Expression where
 	show (Lam decl body) = "(\\" ++ decl ++ " -> " ++ show body ++ ")"
 	show (App t1 t2) = (show t1) ++ " $ " ++ (show t2)
