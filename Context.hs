@@ -2,15 +2,14 @@ module Context where
 
 type Name = String
 
-data Expression = 
-	Lam Name Expression
-	| App Expression Expression
-	| Var Name
+data Expression = Lam Name Expression
+                | App Expression Expression
+                | Var Name
 
 instance Show Expression where
-	show (Lam decl body) = "(\\" ++ decl ++ " -> " ++ show body ++ ")"
-	show (App t1 t2) = (show t1) ++ " $ " ++ (show t2)
-	show (Var name) = name
+    show (Lam decl body) = "(\\" ++ decl ++ " -> " ++ show body ++ ")"
+    show (App t1 t2) = (show t1) ++ " $ " ++ (show t2)
+    show (Var name) = name
 
 ex :: Expression
 ex = Lam "x" (App (Var "x") (Lam "y" (Var "y")))
