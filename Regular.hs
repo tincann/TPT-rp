@@ -56,6 +56,9 @@ instance Regular Expression where
 
 
 
+normalize :: PF Expression String -> PF Expression Int
+normalize = _
+
 main = do
     print $ normalize exLam
     print exLam2

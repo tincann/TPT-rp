@@ -41,3 +41,8 @@ normalize ex = transform ex [] 1 where
 
 
 
+main = do
+    print (show exLam)
+    print $ " == "
+    print (show exLam2)
+    print $ show $ exLam == exLam2

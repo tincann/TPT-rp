@@ -18,4 +18,4 @@ exLam :: Expression
 exLam = Lam "z" $ App (Lam "y" $ App (Var "y") (Lam "x" (Var "x"))) (Lam "x" $ App (Var "z") (Var "x"))
 
 exLam2 :: Expression
-exLam2 = Lam "zz" $ App (Lam "yy" $ App (Var "yy") (Lam "xx" (Var "xx"))) (Lam "xx" $ App (Var "zz") (Var "xx"))
+exLam2 = Lam "a" $ App (Lam "y" $ App (Var "y") (Lam "xx" (Var "xx"))) (Lam "z" $ App (Var "a") (Var "z"))
